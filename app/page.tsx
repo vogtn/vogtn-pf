@@ -279,7 +279,18 @@ export default function Home() {
              Friendly with <span className="text-[#9C9CFF] font-semibold hover:text-[#B8B8FF]">English</span>, <span className="text-[#9C9CFF] font-semibold hover:text-[#B8B8FF]">中文</span>, a bit of <span className="text-[#9C9CFF] font-semibold hover:text-[#B8B8FF]">日本话</span>.. always happy to learn more!
             </p>
             <p className="text-lg">
-              Feel free to see the rest of my portfolio to get to know me better, or checkout my <span className="text-[#9C9CFF] font-semibold underline hover:text-[#B8B8FF]">resume</span> and contact information via the sidebar or links below. 
+              Feel free to see the rest of my portfolio to get to know me better, or checkout my{' '}
+              <a 
+                href="https://drive.google.com/uc?export=download&id=1SnzI9_AwCoMJEner8ZoKe3jjJP005_X3" 
+                download
+                className="text-[#9C9CFF] font-semibold underline hover:text-[#B8B8FF] cursor-pointer inline-flex items-center gap-1.5"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="inline-block">
+                  <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                </svg>
+                resume
+              </a>
+              {' '}and contact information via the sidebar or links below. 
             </p>
           </div>
           </GlassSection>
@@ -499,7 +510,38 @@ export default function Home() {
             <h2 className="text-2xl font-serif mb-8 text-[#9C9CFF] font-[var(--font-serif)]">
               Contact
             </h2>
-            <p className="text-white/80 text-lg">Coming soon...</p>
+            <p className="text-white/80 text-lg">            <a 
+                href="https://drive.google.com/uc?export=download&id=1SnzI9_AwCoMJEner8ZoKe3jjJP005_X3" 
+                download
+                className="text-[#9C9CFF] font-semibold underline hover:text-[#B8B8FF] cursor-pointer inline-flex items-center gap-1.5"
+              >
+                <svg width="70" height="70" viewBox="0 0 50 50" fill="currentColor" className="inline-block" style={{ transform: 'translateY(20%)' }}>
+                  <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                </svg>
+                <p className="text-white/80 text-lg">  
+                <span className="text-[#9C9CFF] font-semibold">resume</span> 
+                </p>
+              </a>
+            </p>
+            <p className="text-white/80 text-lg">            <a 
+                href="mailto:nicolasjvogt@gmail.com"
+                className="text-[#9C9CFF] font-semibold underline hover:text-[#B8B8FF] cursor-pointer inline-flex items-center gap-1.5"
+              >
+            <svg width="70" height="70" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" style={{ transform: 'translateY(34%)' }}>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Dribbble-Light-Preview" transform="translate(-300.000000, -922.000000)" fill="#ffffff">
+                            <g id="icons" transform="translate(56.000000, 160.000000)">
+                                <path d="M262,764.291 L254,771.318 L246,764.281 L246,764 L262,764 L262,764.291 Z M246,775 L246,766.945 L254,773.98 L262,766.953 L262,775 L246,775 Z M244,777 L264,777 L264,762 L244,762 L244,777 Z" id="email-[#1573]">
+                                </path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <p className="text-white/80 text-lg" >  
+                <span className="text-[#9C9CFF] font-semibold">nicolasjvogt@gmail.com</span> 
+                </p>
+               </a>
+            </p>
           </GlassSection>
         </div>
       </main>

@@ -18,15 +18,32 @@ export default function Sidebar({ activePage = 'home', onNavigate }: SidebarProp
     }
   }, [activePage]);
 
-  const navItems = [
+  const navItems: Array<{
+    id: string;
+    icon: string;
+    label: string;
+    sectionId: string;
+    isDownload?: boolean;
+  }> = [
     { id: 'home', icon: '⌂', label: 'Home', sectionId: 'home' },
     { id: 'profile', icon: '☺', label: 'Profile', sectionId: 'profile' },
     { id: 'experience', icon: '💼', label: 'Experience', sectionId: 'experience' },
     { id: 'contact', icon: '✎', label: 'Contact', sectionId: 'contact' },
-    { id: 'messages', icon: '✉', label: 'Messages', sectionId: 'messages' },
+    { id: 'resume', icon: '📄', label: 'Resume', sectionId: 'resume', isDownload: true },
   ];
 
-  const handleClick = (itemId: string, sectionId: string) => {
+  const handleClick = (itemId: string, sectionId: string, isDownload?: boolean) => {
+    if (isDownload) {
+      // Handle resume download
+      const link = document.createElement('a');
+      link.href = 'https://drive.google.com/uc?export=download&id=1SnzI9_AwCoMJEner8ZoKe3jjJP005_X3';
+      link.download = 'resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      return;
+    }
+    
     setCurrentPage(itemId);
     
     // Scroll to section using scrollTo and focus it
@@ -73,9 +90,9 @@ export default function Sidebar({ activePage = 'home', onNavigate }: SidebarProp
           <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
         </svg>
       ),
-      messages: (
+      resume: (
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
         </svg>
       ),
     };
@@ -91,7 +108,7 @@ export default function Sidebar({ activePage = 'home', onNavigate }: SidebarProp
         return (
         <button
           key={item.id}
-          onClick={() => handleClick(item.id, item.sectionId)}
+          onClick={() => handleClick(item.id, item.sectionId, item.isDownload)}
           onMouseEnter={() => setHoveredItem(item.id)}
           onMouseLeave={() => setHoveredItem(null)}
           className={`group relative w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 flex-shrink-0 ${
