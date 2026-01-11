@@ -373,15 +373,6 @@ export default function Home() {
                 <div className="space-y-2">
                   {/* byrst Logo */}
                   <div className="mb-3">
-                    <svg width="100" height="50" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      {/* Stylized 'b' logo - vertical bar and semi-circle forming lowercase 'b' */}
-                      {/* Vertical bar (stem) */}
-                      <rect x="25" y="10" width="6" height="28" fill="white" rx="1"/>
-                      {/* Semi-circle/D shape (bowl) */}
-                      <path d="M31 10 Q42 10 42 20 Q42 24 38 24 Q42 24 42 28 Q42 38 31 38 L31 10 Z" fill="white"/>
-                      {/* byrst text */}
-                      <text x="50" y="35" fill="white" fontSize="14" fontFamily="system-ui, -apple-system, sans-serif" fontWeight="500" letterSpacing="1px">byrst</text>
-                    </svg>
                   </div>
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                     <h3 className="text-xl font-semibold text-white">Frontend Developer</h3>
