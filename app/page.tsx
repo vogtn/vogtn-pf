@@ -281,7 +281,7 @@ export default function Home() {
             <p className="text-lg">
               Feel free to see the rest of my portfolio to get to know me better, or checkout my{' '}
               <a 
-                href="https://drive.google.com/uc?export=download&id=1SnzI9_AwCoMJEner8ZoKe3jjJP005_X3" 
+                href="https://drive.google.com/file/d/1IeoTXsUqb2yyp18p1DC6CAwgr875wo5_/view?usp=sharing" 
                 download
                 className="text-[#9C9CFF] font-semibold underline hover:text-[#B8B8FF] cursor-pointer inline-flex items-center gap-1.5"
               >
@@ -502,7 +502,7 @@ export default function Home() {
               Contact
             </h2>
             <p className="text-white/80 text-lg">            <a 
-                href="https://drive.google.com/uc?export=download&id=1SnzI9_AwCoMJEner8ZoKe3jjJP005_X3" 
+                href="https://drive.google.com/file/d/1IeoTXsUqb2yyp18p1DC6CAwgr875wo5_/view?usp=sharing" 
                 download
                 className="text-[#9C9CFF] font-semibold underline hover:text-[#B8B8FF] cursor-pointer inline-flex items-center gap-1.5"
               >
